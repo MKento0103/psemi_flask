@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet"
+        href="/static/css/style.css"> 
+        <title>HELLO</title>
+    </head>
+    <body>
+        <h1>Hello from index.html</h1>
+        <p class="hello">Violet Color</p>
+        <p class="world">Hello, World!<p>
+
+        <ul>
+         {% for x in list %} 
+            <li>{{x}}</li>
+         {% endfor %}
+        </ul>
+
+        <hr>
+        <p>{{"好きな色: %s 好きなゲーム: %s 好きな本: %s" % (dictionary["好きな色"],dictionary["好きなゲーム"],dictionary["好きな本"]) }}<p> 
+        <hr>
+
+        {%if flag%} <!--値の真偽による表示-->
+        <p>pythonのflagの値はtrueです．</p>
+        {% else %}
+        <p>pythonのflagの値はfalseです．</p>
+        {% endif %}
+    </body>
+</html>
